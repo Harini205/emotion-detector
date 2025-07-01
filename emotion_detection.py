@@ -11,9 +11,9 @@ def emotion_detector(text_to_analyse):
 
     anger_score = formatted_response['emotionPredictions'][0]['emotion']['anger']
     disgust_score = formatted_response['emotionPredictions'][0]['emotion']['disgust']
-    fear_score = formatted_response['emotionPredictons'][0]['emotion']['fear']
-    joy_score = formatted_response['emotionPredictons'][0]['emotion']['joy']
-    sadness_score = formatted_response['emotionPredictons'][0]['emotion']['sadness']
+    fear_score = formatted_response['emotionPredictions'][0]['emotion']['fear']
+    joy_score = formatted_response['emotionPredictions'][0]['emotion']['joy']
+    sadness_score = formatted_response['emotionPredictions'][0]['emotion']['sadness']
     
     max_score = max(anger_score, disgust_score, fear_score, joy_score, sadness_score)
     dominant_emotion = ""
