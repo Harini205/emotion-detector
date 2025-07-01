@@ -9,6 +9,9 @@ def emotion_detect():
     response = emotion_detector(text_to_analyze)
     dominant = response['dominant_emotion']
 
+    if dominant is None:
+        return "Invalid text! Please try again!"
+
     return "For the given statement, the system response is {}. The dominant emotion is {}.".format(response, dominant)
 
 @app.route("/")
