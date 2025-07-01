@@ -18,7 +18,7 @@ def emotion_detector(text_to_analyse):
     max_score = max(anger_score, disgust_score, fear_score, joy_score, sadness_score)
     dominant_emotion = ""
 
-    for key, value in formatted_response['emotionPredictions']['emotion'] :
+    for key, value in formatted_response['emotionPredictions'][0]['emotion'] :
         if value == max_score :
             dominant_emotion = key
             break
